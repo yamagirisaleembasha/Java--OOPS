@@ -1,0 +1,29 @@
+import java.util.Scanner;
+class with_this
+{
+int n1,n2,sum;
+void getinfo(int n1,int n2)
+{
+this.n1=n1;
+this.n2=n2;
+}
+void summation()
+{
+sum=n1+n2;
+System.out.println("sum is:"+sum);
+}
+}
+class Example2
+{
+public static void main(String args[])
+{
+int n1,n2;
+Scanner sc=new Scanner(System.in);
+System.out.println("enter two numbers:");
+n1=sc.nextInt();
+n2=sc.nextInt();
+with_this obj=new with_this();
+obj.getinfo(n1,n2);
+obj.summation();
+}
+}
