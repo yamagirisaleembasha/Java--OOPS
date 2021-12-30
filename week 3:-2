@@ -1,0 +1,53 @@
+class example
+{
+    int hr;
+    int min;
+    int sec;
+    example()
+    {
+	hr=9;
+	min=56;
+	sec=45;
+    }
+    example(int hr)
+    {
+        this.hr=hr;
+        min=56;
+        sec=45;
+    }
+    example(int hr,int min)
+    {
+        this.hr=hr;
+        this.min=min;
+        sec=35;
+    }
+    example(int hr,int min,int sec)
+    {
+        this.hr=hr;
+        this.min=min;
+        this.sec=sec;
+    }
+    void display()
+    {
+        System.out.println("hours:minutes:seconds :- "+hr+":"+min+":"+sec);
+    }
+}
+
+class madhavi
+{
+    public static void main(String[] args)
+   {
+	example e0 = new example();
+        example e1 = new example(10);
+        example e2 = new example(11,20);
+        example e3 = new example(12,21,30);
+	System.out.println("Zero parameters passed to constructor:");
+        e0.display();
+	System.out.println("One parameter passed to constructor:");
+        e1.display();
+	System.out.println("Two parameter passed to constructor:");
+        e2.display();
+	System.out.println("Three parameter passed to constructor:");
+        e3.display();
+    }
+}
