@@ -1,0 +1,66 @@
+import java.util.*;
+class student
+{
+	Scanner sc=new Scanner(System.in);
+	String name;
+	int rollnumber;
+	void read()
+	{
+	System.out.println("Enter name of the student:");
+	name=sc.next();
+	System.out.println("enter rollnumber of the student:");
+	rollnumber=sc.nextInt();
+	}
+}
+class test extends student
+{
+	int a[]=new int[6];
+	void marks()
+	{
+	super.read();
+	for(int i=0;i<6;i++)
+	{
+	System.out.println("enter the marks of the "+(i+1)+" subject");
+	a[i]=sc.nextInt();
+	}
+	}
+}
+class result extends test
+{
+	int sum=0;
+	void totalmarks()
+	{
+	super.marks();
+	for(int i=0;i<6;i++)
+	{
+	sum=sum+a[i];
+	}
+	}
+	void display()
+	{
+	System.out.println("Name is: "+name+" RollNumber is: "+rollnumber+" total marks are: "+sum);
+	}
+}
+class week42
+{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		int n,i;
+		System.out.println("enter number of students:");
+		n=sc.nextInt();
+		result r[]=new result[n];
+		for(i=0;i<n;i++)
+		{
+			System.out.println("enter the "+(i+1)+" student details: ");
+			r[i]=new result();
+			r[i].totalmarks();
+		}
+		for(i=0;i<n;i++)
+		{
+			System.out.println("total marks of "+(i+1)+" student are:");
+			r[i].display();
+		}
+	}
+}
+	
