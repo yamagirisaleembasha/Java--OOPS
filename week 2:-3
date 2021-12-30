@@ -1,0 +1,19 @@
+class variable
+{
+void arguments(int str)
+{
+System.out.println("the no.of arguments are:"+str.length);
+System.out.println("the arguments are:");
+for(int i:str)
+{
+System.out.println(i);
+}
+}
+class length
+{
+public static void main(String args[]){
+arguments(1,2,3)
+arguments()
+arguments(1)
+}
+}
