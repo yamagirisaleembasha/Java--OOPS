@@ -1,0 +1,25 @@
+class Outer
+{
+    int outer_x=5;
+    public void test()
+    {
+        innerclass i = new innerclass();
+        i.display();
+    }
+    public class innerclass
+    {
+        public void display()
+        {
+            System.out.println("The outer_x is:"+outer_x);  
+        }
+    }
+}
+
+class innerclassdemo
+{
+    public static void main (String args[])
+    {
+        Outer o = new Outer();
+        o.test();
+    }
+}
