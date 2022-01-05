@@ -1,0 +1,54 @@
+import java.util.*;
+interface student
+{
+	String name="Madhavi";
+	int id=134;
+	String Class="CSE";
+
+	void getvalue();
+}
+class department implements student
+{
+	int attendance;
+	public void getAttendance()
+	{
+	Scanner sc=new Scanner(System.in);
+	System.out.println("enter attendane:");
+		attendance=sc.nextInt();
+	}
+
+	public void getvalue()
+	{
+		System.out.println("Name is:"+name+"\nID is:"+id+" \nClass is:"+Class);
+	}
+}
+class exam extends department
+{
+	public void calculate_attendance()
+	{
+		attendance=attendance;
+	}
+	public boolean eligible()
+	{
+		if(attendance<75)
+		{
+			return false;
+		}
+		else
+		{
+			return true;
+		}
+	}
+}
+class week62
+{
+	public static void main(String[] args)
+	{
+		exam e=new exam();
+		e.getvalue();
+		e.getAttendance();
+		e.calculate_attendance();
+		System.out.println("Eligibility :"+e.eligible());
+	}
+}
+	
