@@ -4,15 +4,15 @@ class Employee
 	Scanner sc=new Scanner(System.in);
 	String name;
 	int id;
-	float salary;
+	double salary;
 	void read_emp()
-	{ 
-	System.out.println("enter the name:");
+	{
+	System.out.println("enter the name of the employee:");
 	name=sc.next();
-	System.out.println("enter the id:");
+	System.out.println("enter the id of the employee:");
 	id=sc.nextInt();
-	System.out.print("enter the salary:");
-	salary=sc.nextFloat();
+	System.out.print("enter the salary of the employee:");
+	salary=sc.nextDouble();
 	}
 }
 class permanent_employee extends Employee
@@ -20,9 +20,11 @@ class permanent_employee extends Employee
 	void print_emp()
 	{
 		super.read_emp();
+		salary=salary+0.05*salary;
+		System.out.println("Permanent employee:");
 		System.out.println("name of the employee is:"+name);
 		System.out.println("id of the employee is:"+id);
-		System.out.println("salary of the employee is:"+(salary+500));
+		System.out.println("salary of the employee is:"+salary);
 	}
 }
 class temporary_employee extends Employee
@@ -30,9 +32,11 @@ class temporary_employee extends Employee
 	void print_emp()
 	{
 		super.read_emp();
+		salary=salary+0.35*salary;
+		System.out.println("Temporary employee:");
 		System.out.println("name of the employee is:"+name);
 		System.out.println("id of the employee is:"+id);
-		System.out.println("salary of the employee is:"+(salary+350));
+		System.out.println("salary of the employee is:"+salary);
 	}
 }
 class week43
@@ -40,27 +44,29 @@ class week43
 	public static void main(String[] args)
 	{
 		Scanner sc=new Scanner(System.in);
-		System.out.println("enter the number of employees:");
-		int n=sc.nextInt();
-		permanent_employee pe[]=new permanent_employee[n];
-		temporary_employee te[]=new temporary_employee[n];
-		int i=0;
-		String s[]=new String[n];
-		for(i=0;i<n;i++)
+		int choice;
+		while(true)
 		{
-		System.out.println("enter whether the employee is permanent or temporary:");
-		s[i]=sc.next();
-		if(s[i]=="peremp")
+		System.out.println("Enter your choice:\n 1.Permanent employee\n 2.Temporary employee\n 3.Exit");
+		choice=sc.nextInt();
+		switch(choice)
 		{
-			pe[i].print_emp();
-		}
-		else if(s[i]=="tememp")
-		{
-			te[i].print_emp();
+		case 1:
+			System.out.println("Details of permanent employee:");
+			permanent_employee pe=new permanent_employee();
+			pe.print_emp();
+			break;
+		case 2:
+			System.out.println("Details of temporary employee:");
+			temporary_employee te=new temporary_employee();
+			te.print_emp();
+			break;
+		case 3:
+			System.out.println("Exit\n");
+			break;
 		}
 		}
 	}
 }
-
 
 
