@@ -1,0 +1,16 @@
+class week53{  
+   final int MAX_VALUE;
+	 
+   week53(){
+      MAX_VALUE=100;
+   }
+   void myMethod(){  
+      System.out.println(MAX_VALUE);
+   }  
+   public static void main(String args[]){  
+      week53 obj=new  week53();  
+      obj.myMethod();  
+   }  
+}
+
+
