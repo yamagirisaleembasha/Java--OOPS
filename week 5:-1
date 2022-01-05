@@ -1,0 +1,41 @@
+import java.util.*;
+class room
+{
+	float length;
+	float breadth;
+	room()
+	{
+		length=65;
+		breadth=45;
+	}
+	room(int length)
+	{
+		this.length=length;
+		breadth=8;	
+	}
+	room(int length,int breadth)
+	{
+		this.length=length;
+		this.breadth=breadth;
+	}
+	void display()
+	{
+		System.out.println("Area of room is:"+(length*breadth));
+	}
+}
+class week51
+{
+	public static void main(String args[])
+	{
+		room r0=new room();
+		room r1=new room(23);
+		room r2=new room(10,20);
+	System.out.println("Zero parameters passed to constructor:");
+        r0.display();
+	System.out.println("One parameter passed to constructor:");
+        r1.display();
+	System.out.println("Two parameter passed to constructor:");
+        r2.display();
+	}
+}
+	
