@@ -1,0 +1,66 @@
+import java.util.*;
+class Employee
+{
+	Scanner sc=new Scanner(System.in);
+	String name;
+	int id;
+	float salary;
+	void read_emp()
+	{ 
+	System.out.println("enter the name:");
+	name=sc.next();
+	System.out.println("enter the id:");
+	id=sc.nextInt();
+	System.out.print("enter the salary:");
+	salary=sc.nextFloat();
+	}
+}
+class permanent_employee extends Employee
+{
+	void print_emp()
+	{
+		super.read_emp();
+		System.out.println("name of the employee is:"+name);
+		System.out.println("id of the employee is:"+id);
+		System.out.println("salary of the employee is:"+(salary+500));
+	}
+}
+class temporary_employee extends Employee
+{
+	void print_emp()
+	{
+		super.read_emp();
+		System.out.println("name of the employee is:"+name);
+		System.out.println("id of the employee is:"+id);
+		System.out.println("salary of the employee is:"+(salary+350));
+	}
+}
+class week43
+{
+	public static void main(String[] args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the number of employees:");
+		int n=sc.nextInt();
+		permanent_employee pe[]=new permanent_employee[n];
+		temporary_employee te[]=new temporary_employee[n];
+		int i=0;
+		String s[]=new String[n];
+		for(i=0;i<n;i++)
+		{
+		System.out.println("enter whether the employee is permanent or temporary:");
+		s[i]=sc.next();
+		if(s[i]=="peremp")
+		{
+			pe[i].print_emp();
+		}
+		else if(s[i]=="tememp")
+		{
+			te[i].print_emp();
+		}
+		}
+	}
+}
+
+
+
