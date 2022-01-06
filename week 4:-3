@@ -44,8 +44,8 @@ class week43
 	public static void main(String[] args)
 	{
 		Scanner sc=new Scanner(System.in);
-		int choice;
-		while(true)
+		int choice=0;
+		while(choice<3)
 		{
 		System.out.println("Enter your choice:\n 1.Permanent employee\n 2.Temporary employee\n 3.Exit");
 		choice=sc.nextInt();
@@ -68,5 +68,4 @@ class week43
 		}
 	}
 }
-
 
