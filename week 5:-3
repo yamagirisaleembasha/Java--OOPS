@@ -1,16 +1,48 @@
-class week53{  
-   final int MAX_VALUE;
-	 
-   week53(){
-      MAX_VALUE=100;
-   }
-   void myMethod(){  
-      System.out.println(MAX_VALUE);
-   }  
-   public static void main(String args[]){  
-      week53 obj=new  week53();  
-      obj.myMethod();  
-   }  
+class Finalv{
+    final int a = 32;
+    void first()
+    {
+     a= 45;
+    System.out.println("a is: " + a);
+    }
+}
+class Finalm
+{
+    final void second()
+    {
+      System.out.println("This is a final method");
+    }
 }
 
-
+class Final extends Finalm
+{
+  void second()
+  {
+    System.out.println("The final method is overridden.");
+  }
+}
+final class Finalc
+{
+  Finalc()
+  {
+    System.out.println("This class declared with final");
+  }
+}
+class Final1 extends Finalc
+{
+  Final1()
+  {
+    System.out.println("This sub class of class Finalc");
+  }
+}
+class A
+{
+  public static void main(String args[])
+  {
+    Finalv v=new Finalv();
+    v.first();
+    Final m=new Final();
+    m.second();
+    Final1 c=new Final1();
+   }
+}
