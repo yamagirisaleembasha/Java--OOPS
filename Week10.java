@@ -64,3 +64,25 @@ public class Week10
  n.start();
  }
 }
+/*
+Random Integer generated : 45
+Cube of 45 = 91125
+Random Integer generated : 14
+Square of 14 = 196
+Random Integer generated : 17
+Cube of 17 = 4913
+Random Integer generated : 44
+Square of 44 = 1936
+Random Integer generated : 19
+Cube of 19 = 6859
+Random Integer generated : 37
+Cube of 37 = 50653
+Random Integer generated : 49
+Cube of 49 = 117649
+Random Integer generated : 50
+Square of 50 = 2500
+Random Integer generated : 87
+Cube of 87 = 658503
+Random Integer generated : 41
+Cube of 41 = 68921
+*/
